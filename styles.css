@@ -1,119 +1,66 @@
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: antiquewhite;
-}
-
-.container {
-    width: 80vw;
-    height: 100vh;
-    background-color: darkolivegreen;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5px;
-    box-shadow: -6px 6px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 20px 0 20px 0;
-}
-
-header .title {
-    font-size: 40px;
-    font-weight: 700;
+    background-color: #333;
     color: white;
-    margin-bottom: 20px;
+    text-align: center;
+    padding: 1rem;
 }
 
-.header-menu {
-    display: flex;
-    flex-direction: row;
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#book-form {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+#book-form label,
+#book-list label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
     width: 100%;
-    margin: 20px 0 20px 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.search-bar {
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 40px;
-}
-
-.header-menu i {
-    margin-right: 20px;
-    font-size: 30px;
+button {
+    background-color: #333;
     color: white;
-}
-
-.search-bar input {
-    width: 500px;
-    height: 30px;
-    border-radius: 10px;
     border: none;
-    padding-left: 10px;
-}
-
-.header-buttons {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin-right: 40px;
-    gap: 20px;
-}
-
-.header-buttons .btn {
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-    border: none;
-    background-color: darkolivegreen;
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
+    padding: 0.5rem 1rem;
     cursor: pointer;
 }
 
-.book-container {
-    width: 80vw;
-    height: 80vh;
-    background-color: wheat;
-    border-radius: 30px;
-    overflow: auto;
+button:hover {
+    background-color: #555;
 }
 
-.book-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    margin-bottom: 10px;
+#book-list ul {
+    list-style: none;
+    padding: 0;
 }
 
-.book-container hr {
-    width: 100%;
-    border: 2px solid black;
+#book-list li {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
-.shelf {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 7rem;
-    margin: 10px 0 10px 0;
-    height: 100%;
+/* Add some styling for the delete button */
+.delete-button {
+    margin-left: 25px; /* Add some spacing between book info and delete button */
 }
 
-.book {
-    height: 200px;
-    width: 125px;
-    background-color: darkseagreen;
-    margin-top: 40px;
-}
