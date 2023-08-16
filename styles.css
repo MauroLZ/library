@@ -1,14 +1,30 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 header {
-    background-color: #333;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-size: 45px;
 }
 
 main {
@@ -19,14 +35,18 @@ main {
 
 #book-form {
     border: 1px solid #ccc;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 
 #book-form label,
 #book-list label {
     display: block;
-    margin-bottom: 0.5rem;
+    font-size: 23px;
+    margin: 1.3rem 0 0.3rem 0;
 }
 
 input[type="text"] {
@@ -34,18 +54,26 @@ input[type="text"] {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#add-book-form input[type="text"]:focus {
+    border-color: var(--primary-color);
 }
 
 button {
-    background-color: #333;
+    background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.3rem;
     cursor: pointer;
+    border-radius: 10px;
+    font-size: 14px;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: var(--secondary-color);
 }
 
 #book-list ul {
@@ -57,10 +85,110 @@ button:hover {
     border: 1px solid #ccc;
     padding: 1rem;
     margin-bottom: 1rem;
+    border-radius: 20px;
+    justify-content: space-around;
 }
 
-/* Add some styling for the delete button */
+#submit {
+    margin-top: 20px;
+}
+
+#books li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 30px 20px 30px 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+#books > li > div {
+    width: 85%;
+}
+
+#books li > div > span {
+    font-weight: bold;
+    font-size: 22px;
+}
+
 .delete-button {
-    margin-left: 25px; /* Add some spacing between book info and delete button */
+    position: absolute;
+    right: 40px;
+}
+
+
+h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#book-list {
+    margin-top: 2rem;
+    font-size: 20px;
+}
+
+#book-list-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#books > li {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+#view-books {
+    margin-left: 31.8rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 50px auto auto;
+    height: 60%;
+    overflow: scroll;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 2rem;
+    right: 10rem;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#modal-book-info > li {
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#modal-book-info > li:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
 }
 

@@ -5,11 +5,15 @@
     <title>Library</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cormorant:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
     <h1>My Library</h1>
+    <i class="fa-solid fa-book"></i>
 </header>
 <main>
     <section id="book-form">
@@ -31,13 +35,25 @@
             <input type="text" id="pages" required>
 
             <button type="submit" id="submit">Add Book</button>
+            <button type="button" id="view-books">View Books</button>
         </form>
     </section>
 
     <section id="book-list">
-        <h2>Book List</h2>
+        <h2 id="book-list-title">Book List</h2>
         <ul id="books"></ul>
     </section>
+
+    <div id="book-modal" class="modal">
+        <div class="modal-content">
+            <div id="close-button-container">
+                <span class="close">&times;</span>
+            </div>
+            <div id="modal-book-info"></div>
+        </div>
+    </div>
+
+
 </main>
 <script src="app.js"></script>
 </body>
